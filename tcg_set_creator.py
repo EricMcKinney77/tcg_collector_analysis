@@ -7,7 +7,7 @@ import config.shimmering_skies as tcg
 
 # Generate card numbers for each rarity
 # Card numbers
-card_nums_list = [x + 1 for x in range(tcg.NUM_CARDS)]
+card_id_list = [x + 1 for x in range(tcg.NUM_CARDS)]
 
 # Card rarities
 card_rarity_list = []
@@ -18,7 +18,7 @@ for card_rarity_name, card_rarity_num in tcg.NUM_CARDS_DICT.items():
 # TODO: Card foiled
 
 # Combine into a single dataframe
-card_data = {'card_num': card_nums_list, 'rarity': card_rarity_list}
+card_data = {'card_id': card_id_list, 'rarity': card_rarity_list}
 set_df = pd.DataFrame(card_data)
 
 # Store the dataframe as a pickle file
